@@ -1,6 +1,7 @@
 SampleApp::Application.routes.draw do
-  get "users/new"
 
+  resources :users
+  
   root to: 'static_pages#home'
 
   match '/signup',  to: 'users#new'
@@ -22,6 +23,7 @@ SampleApp::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  resources :users
 
   # Sample resource route with options:
   #   resources :products do
